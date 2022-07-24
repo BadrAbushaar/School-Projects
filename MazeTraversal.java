@@ -1,3 +1,12 @@
+/* 
+   - Solves a maze using recursion and backtracking
+   - Maze is read from a .dat file
+   - Correct path is marked with "+"
+   - Failed path is marked with "-"
+   - Walls are marked with "X"
+   - Empty/valid spots are marked with " " 
+*/
+
 import java.util.Scanner;
 import java.io.File;
 
