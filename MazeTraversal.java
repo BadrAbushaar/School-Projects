@@ -86,21 +86,22 @@ public class MazeTraversal {
                 return true;
             maze[row][col] = '+';
 
-            // North
+            // move North
             boolean mazeFlag = solveMaze(maze, row - 1, col, startRowIndex, startColIndex, finishRow, finishCol);
 
-            // East
+            // move East
             if (!mazeFlag)
                 mazeFlag = solveMaze(maze, row, col + 1, startRowIndex, startColIndex, finishRow, finishCol);
 
-            // South
+            // move South
             if (!mazeFlag)
                 mazeFlag = solveMaze(maze, row + 1, col, startRowIndex, startColIndex, finishRow, finishCol);
 
-            // West
+            // move West
             if (!mazeFlag)
                 mazeFlag = solveMaze(maze, row, col - 1, startRowIndex, startColIndex, finishRow, finishCol);
-
+            
+            // backtrack
             if (mazeFlag) {
                 return mazeFlag;
             } else {
