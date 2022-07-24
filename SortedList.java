@@ -61,7 +61,7 @@ public class SortedList<E extends Comparable<? super E>> extends List<E> {
     }
 
     // Remove method
-    // remove a node from the LinekdList
+    // remove a node from the LinkedList
     public void remove(E data) {
         Node<E> curr = head;
         head = removeHelper(data, curr);
