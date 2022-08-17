@@ -1,5 +1,36 @@
+/*Recursive implementation of a binary search tree that implements the following methods:
+    - insert
+    - remove
+    - search
+    - iterator
+    - findIOP
+    - traverse
+*/
+
 import java.util.Vector;
 import java.util.Iterator;
+
+public abstract class BinaryTree<E> implements Iterable<E> {
+
+    protected Node<E> root;
+
+    public abstract void insert(E data);
+
+    public abstract void remove(E data);
+
+    public abstract boolean search(E data);
+
+    protected class Node<T> {
+
+        protected T data;
+        protected Node<T> left;
+        protected Node<T> right;
+
+        protected Node(T data) {
+            this.data = data;
+        }
+    }
+}
 
 public class BinarySearchTree<E extends Comparable<? super E>> extends BinaryTree<E> {
     private Vector<E> vector;
